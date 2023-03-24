@@ -9,6 +9,13 @@ def encoder(password):
 
 #function does the opposite of the encoder and subtracts 3 from every digit entered
 
+def decoder(encoded_password):
+    password = ""
+    for digit in encoded_password:
+        new_digit = str((int(digit) - 3) % 10)
+        password += new_digit
+    return password
+
 #main logic
 if __name__ == '__main__':
     menu_continue = True
